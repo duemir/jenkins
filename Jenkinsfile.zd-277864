@@ -22,7 +22,6 @@ spec:
     stages {
         stage('Main') {
             steps {
-                sh 'hostname'
                 helloWorld()
                 container('maven') {
                   sh 'mvn -am -pl war,bom -Pquick-build clean install'
